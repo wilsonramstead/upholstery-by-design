@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- DEMO: remove noindex when site goes live -->
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Upholstery By Design | Marine &amp; Furniture Upholstery — Palmetto, FL</title>
+<meta name="description" content="Upholstery By Design in Palmetto, FL rebuilds boat and furniture upholstery — marine seats and bolsters, livewell and console covers, boat cushions, plus custom cushion covers for the home. 4.8 stars across 20 Google reviews. Call Crystal for a quote.">
+<meta name="author" content="Upholstery By Design LLC">
+<meta name="theme-color" content="#07131a">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Upholstery By Design | Marine &amp; Furniture Upholstery — Palmetto, FL">
+<meta property="og:description" content="Boat and furniture upholstery rebuilt right in Palmetto, FL — marine seats, bolsters, console covers and custom cushions. 4.8 stars, 20 Google reviews.">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://wilsoninnovations.net/upholstery-by-design/">
+<meta property="og:image" content="https://wilsoninnovations.net/upholstery-by-design/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Upholstery By Design | Marine &amp; Furniture Upholstery — Palmetto, FL">
+<meta name="twitter:description" content="Boat and furniture upholstery rebuilt right in Palmetto, FL. 4.8 stars, 20 Google reviews.">
+<meta name="twitter:image" content="https://wilsoninnovations.net/upholstery-by-design/img/hero.jpg">
+
+<!-- Fonts: Literata (display) + Be Vietnam Pro (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600;7..72,700&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Upholstery By Design LLC",
+  "description": "Marine and furniture upholstery shop in Palmetto, Florida. Boat seats, bolsters and side panels, livewell and console covers, bow cushions and full deck sets, plus custom cushion covers for the home. Design help and foam repairs.",
+  "url": "https://wilsoninnovations.net/upholstery-by-design/",
+  "image": "https://wilsoninnovations.net/upholstery-by-design/img/hero.jpg",
+  "telephone": "+19418127878",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "807 10th Ave W",
+    "addressLocality": "Palmetto",
+    "addressRegion": "FL",
+    "postalCode": "34221",
+    "addressCountry": "US"
+  },
+  "areaServed": "Palmetto, Bradenton, Manatee County and the greater Tampa Bay area",
+  "knowsAbout": ["Marine upholstery", "Boat seats and bolsters", "Livewell and console covers", "Boat cushions", "Furniture cushion covers", "Foam replacement", "Custom upholstery design"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "20"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"}
+  ]
+}
+</script>
+
+<style>
+/* =========================================================================
+   UPHOLSTERY BY DESIGN — "Deep Harbor" night treatment (Tier 2 showpiece)
+   Deep petrol-navy canvas + living sand/teal aurora + film grain.
+   Display: Literata (serif) · Body/UI: Be Vietnam Pro
+   Motion is transform/opacity (+ one-shot blur reveals), gated behind
+   prefers-reduced-motion.
+   ========================================================================= */
+:root{
+  /* canvas — deep petrol harbour */
+  --ink:#07131a;
+  --ink-2:#0b1e26;
+  --ink-3:#123039;
+
+  /* type */
+  --paper:#f2f6f5;
+  --paper-dim:#9db7b6;
+
+  /* the signal — warm sand */
+  --sand:#d8b487;
+  --sand-bright:#ecd2ab;
+  --sand-soft:#f4e4c9;
+  --sand-deep:#b78a55;
+  --rope:#8a6534;
+
+  /* slate-teal micro-accent */
+  --teal:#3c8890;
+  --teal-bright:#5aa9b0;
+
+  /* hairlines + glass */
+  --line:rgba(216,180,135,.20);
+  --line-soft:rgba(216,180,135,.10);
+  --glass:linear-gradient(180deg,rgba(216,180,135,.06),rgba(216,180,135,.015) 55%),rgba(11,30,38,.66);
+
+  --grad:linear-gradient(100deg,var(--sand-soft) 0%,var(--sand) 42%,var(--sand-deep) 78%,var(--rope) 100%);
+  --radius:18px;
+
+  --shadow-md:0 8px 26px rgba(0,0,0,.5), 0 28px 70px rgba(0,0,0,.5);
+  --shadow-lg:0 14px 40px rgba(0,0,0,.55), 0 48px 110px rgba(0,0,0,.55);
+  --glow-sm:0 0 0 1px rgba(216,180,135,.15), 0 10px 34px rgba(138,101,52,.22);
+  --glow-md:0 0 0 1px rgba(236,210,171,.26), 0 14px 44px rgba(138,101,52,.32), 0 4px 18px rgba(60,136,144,.22);
+  --maxw:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--paper-dim);
+  font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  line-height:1.68;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+p{margin:0;overflow-wrap:break-word}
+::selection{background:rgba(138,101,52,.5);color:#fff}
+:focus-visible{outline:2px solid var(--sand);outline-offset:3px;border-radius:6px;box-shadow:0 0 0 6px rgba(216,180,135,.18)}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important;animation-iteration-count:1 !important}
+}
+
+h1,h2,h3,h4{
+  font-family:"Literata","Georgia",serif;
+  line-height:1.16;
+  margin:0;
+  font-weight:500;
+  color:var(--paper);
+  overflow-wrap:break-word;
+}
+h2{font-size:clamp(1.95rem,4.4vw,3.15rem);text-wrap:balance;letter-spacing:-.01em}
+h3{font-size:1.24rem;line-height:1.3;font-weight:600}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:clamp(20px,5vw,44px);padding-right:clamp(20px,5vw,44px)}
+section{position:relative;padding-top:clamp(66px,9vw,120px);padding-bottom:clamp(66px,9vw,120px)}
+
+.gtext{
+  background:var(--grad);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+/* =========================================================================
+   Living background — sand/teal aurora blobs + grain
+   ========================================================================= */
+.aurora{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  overflow:hidden;
+  background:
+    radial-gradient(120% 90% at 50% 0%, #0c2530 0%, var(--ink) 55%),
+    var(--ink);
+  pointer-events:none;
+}
+.aurora i{position:absolute;border-radius:50%;mix-blend-mode:screen}
+.aurora i:nth-child(1){
+  width:72vmax;height:72vmax;top:-30vmax;left:-18vmax;
+  background:radial-gradient(circle at 50% 50%, rgba(216,180,135,.20) 0%, rgba(216,180,135,.06) 38%, transparent 64%);
+  animation:drift-a 54s ease-in-out infinite alternate;
+}
+.aurora i:nth-child(2){
+  width:64vmax;height:64vmax;bottom:-28vmax;right:-20vmax;
+  background:radial-gradient(circle at 50% 50%, rgba(60,136,144,.34) 0%, rgba(60,136,144,.12) 38%, transparent 64%);
+  animation:drift-b 66s ease-in-out infinite alternate;
+}
+.aurora i:nth-child(3){
+  width:46vmax;height:46vmax;top:32%;left:42%;
+  background:radial-gradient(circle at 50% 50%, rgba(236,210,171,.11) 0%, rgba(236,210,171,.04) 40%, transparent 66%);
+  animation:drift-c 76s ease-in-out infinite alternate;
+}
+@keyframes drift-a{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(9vw,7vh,0) scale(1.12) rotate(12deg)}100%{transform:translate3d(-5vw,12vh,0) scale(.94)}}
+@keyframes drift-b{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-10vw,-8vh,0) scale(1.15)}100%{transform:translate3d(4vw,-14vh,0) scale(.92) rotate(-14deg)}}
+@keyframes drift-c{0%{transform:translate3d(0,0,0) scale(1);opacity:.85}50%{transform:translate3d(-14vw,10vh,0) scale(1.3);opacity:1}100%{transform:translate3d(10vw,-8vh,0) scale(.9);opacity:.7}}
+@media (max-width:700px){
+  .aurora i:nth-child(1){width:95vmax;height:95vmax;top:-45vmax;left:-30vmax}
+  .aurora i:nth-child(3){display:none}
+}
+@media (prefers-reduced-motion: reduce){.aurora i{animation:none !important}}
+.grain{
+  position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+  background-size:160px 160px;
+}
+
+/* glowing hairline where an alt panel hands off */
+.alt{background:linear-gradient(180deg,rgba(60,136,144,.14) 0%,rgba(216,180,135,.03) 26%,rgba(216,180,135,.012) 70%,transparent 100%)}
+.alt::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent 4%,rgba(244,228,201,.3) 30%,rgba(216,180,135,.45) 50%,rgba(60,136,144,.4) 70%,transparent 96%);
+  pointer-events:none;
+}
+
+/* ---------- eyebrow ---------- */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:11px;
+  font-family:"Be Vietnam Pro",sans-serif;text-transform:uppercase;
+  letter-spacing:.24em;font-size:.72rem;font-weight:700;color:var(--sand-bright);margin:0 0 16px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;flex:none;background:var(--grad);border-radius:2px;box-shadow:0 0 12px rgba(216,180,135,.7)}
+
+/* ---------- buttons ---------- */
+.btn{
+  position:relative;display:inline-flex;align-items:center;gap:.6em;
+  font-family:"Be Vietnam Pro",sans-serif;font-weight:600;font-size:1rem;
+  padding:15px 26px;border-radius:13px;text-decoration:none;cursor:pointer;border:1px solid transparent;
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+  line-height:1.12;min-width:0;overflow:hidden;
+}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-sand{
+  background:linear-gradient(115deg,var(--sand-deep) 0%,var(--sand) 45%,var(--sand-bright) 75%,var(--sand-deep) 100%);
+  background-size:220% 100%;background-position:0% 0;color:#2a1c08;
+  box-shadow:0 8px 26px rgba(138,101,52,.42), inset 0 1px 0 rgba(255,255,255,.35);
+  animation:btn-sheen-bg 7s linear infinite;
+}
+.btn-sand::after{
+  content:"";position:absolute;top:0;bottom:0;left:-70%;width:45%;
+  background:linear-gradient(105deg,transparent,rgba(255,255,255,.5),transparent);
+  transform:skewX(-18deg);animation:btn-shine 4.2s ease-in-out infinite;pointer-events:none;
+}
+@keyframes btn-sheen-bg{0%{background-position:0% 0}50%{background-position:100% 0}100%{background-position:0% 0}}
+@keyframes btn-shine{0%,58%{left:-70%}88%,100%{left:140%}}
+.btn-sand:hover{transform:translateY(-2px);background-position:60% 0;box-shadow:0 12px 36px rgba(216,180,135,.5), 0 4px 16px rgba(60,136,144,.3), inset 0 1px 0 rgba(255,255,255,.4)}
+@media (prefers-reduced-motion: reduce){.btn-sand,.btn-sand::after{animation:none !important}}
+.btn-ghost{
+  background:rgba(216,180,135,.06);color:var(--paper);border-color:rgba(244,228,201,.4);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+}
+.btn-ghost:hover{background:rgba(216,180,135,.13);border-color:rgba(236,210,171,.6);transform:translateY(-2px);box-shadow:0 0 22px rgba(216,180,135,.2)}
+.btn .sub{display:block;font-size:.72rem;font-weight:400;letter-spacing:.02em;opacity:.85;line-height:1;margin-top:3px}
+.btn.stack .txt{display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+
+.skip{position:absolute;left:-999px;top:0;background:var(--ink-3);color:#fff;padding:12px 18px;z-index:300;border-radius:0 0 10px 0;font-weight:700;text-decoration:none}
+.skip:focus{left:0}
+
+/* ---------- header ---------- */
+header.site{
+  position:sticky;top:0;z-index:100;
+  background:rgba(7,19,26,.6);
+  -webkit-backdrop-filter:saturate(1.4) blur(16px);backdrop-filter:saturate(1.4) blur(16px);
+  border-bottom:1px solid transparent;transition:border-color .25s ease,background .25s ease;
+}
+header.site.is-scrolled{border-bottom-color:var(--line-soft);background:rgba(7,19,26,.85)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none;min-width:0}
+.brand .mark{
+  width:46px;height:46px;flex:none;border-radius:13px;
+  background:linear-gradient(155deg,#16414c,var(--ink));
+  display:grid;place-items:center;color:var(--sand-bright);
+  border:1px solid var(--line);box-shadow:0 6px 16px -8px rgba(0,0,0,.7), 0 0 18px rgba(216,180,135,.18);
+}
+.brand .mark svg{width:26px;height:26px;filter:drop-shadow(0 0 6px rgba(216,180,135,.5))}
+.brand .bt{min-width:0}
+.brand b{font-family:"Literata",serif;font-weight:600;font-size:1.13rem;color:var(--paper);letter-spacing:.01em;line-height:1.14;display:block}
+.brand span.tag{display:flex;align-items:center;gap:6px;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sand-soft);font-weight:700;margin-top:4px;white-space:nowrap}
+.nav-right{display:flex;align-items:center;gap:14px;flex:none;margin-left:auto}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a.link{text-decoration:none;font-weight:500;color:rgba(242,246,245,.82);font-size:.93rem;transition:color .18s ease}
+.nav-links a.link:hover{color:var(--sand-bright)}
+.txt-link{
+  display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+  color:rgba(242,246,245,.9);font-weight:600;font-size:.9rem;white-space:nowrap;
+  border:1px solid rgba(244,228,201,.4);border-radius:11px;padding:10px 15px;flex:none;
+  background:rgba(216,180,135,.05);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  transition:border-color .18s ease,color .18s ease,box-shadow .18s ease;
+}
+.txt-link svg{width:16px;height:16px;flex:none}
+.txt-link:hover{border-color:var(--sand);color:#fff;box-shadow:0 0 18px rgba(216,180,135,.2)}
+.callbtn{
+  position:relative;display:inline-flex;align-items:center;gap:9px;text-decoration:none;
+  background:linear-gradient(115deg,var(--sand-deep) 0%,var(--sand) 45%,var(--sand-bright) 75%,var(--sand-deep) 100%);
+  background-size:220% 100%;color:#2a1c08;font-weight:700;font-family:"Be Vietnam Pro",sans-serif;
+  padding:11px 17px;border-radius:11px;font-size:.92rem;white-space:nowrap;flex:none;overflow:hidden;
+  transition:transform .18s ease,box-shadow .18s ease,background-position .3s ease;line-height:1.05;
+  box-shadow:0 8px 24px rgba(138,101,52,.45), inset 0 1px 0 rgba(255,255,255,.35);
+}
+.callbtn::after{content:"";position:absolute;top:0;bottom:0;left:-70%;width:45%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-18deg);animation:btn-shine 4.2s ease-in-out infinite;pointer-events:none}
+@media (prefers-reduced-motion: reduce){.callbtn::after{animation:none !important}}
+.callbtn:hover{transform:translateY(-1px);background-position:60% 0;box-shadow:0 12px 30px rgba(216,180,135,.55), inset 0 1px 0 rgba(255,255,255,.4)}
+.callbtn svg{width:17px;height:17px;flex:none}
+.callbtn .cn{display:flex;flex-direction:column;line-height:1}
+.callbtn .cn small{font-size:.62rem;opacity:.82;font-weight:700;letter-spacing:.02em;margin-top:2px}
+@media(max-width:940px){.nav-links{display:none}}
+@media(max-width:720px){.txt-link .label-txt{display:none}.txt-link{padding:10px 12px}}
+@media(max-width:600px){
+  .callbtn .cn{display:none}
+  .callbtn{padding:11px 13px;gap:0}
+  .brand .mark{width:42px;height:42px}
+  .brand b{font-size:1rem;white-space:normal}
+}
+@media(max-width:560px){.brand b{font-size:.96rem;letter-spacing:0}.brand span.tag{display:none}}
+@media(max-width:390px){.brand .mark{width:38px;height:38px}.brand b{font-size:.9rem}.txt-link{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;display:flex;align-items:center;min-height:min(94vh,880px);isolation:isolate;overflow:hidden;padding-top:0;padding-bottom:0}
+.hero-bg{position:absolute;inset:0;z-index:-3}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-shade{
+  position:absolute;inset:0;z-index:-2;
+  background:
+    linear-gradient(100deg, rgba(7,19,26,.96) 0%, rgba(7,19,26,.85) 42%, rgba(7,19,26,.40) 100%),
+    linear-gradient(0deg, rgba(7,19,26,.92), rgba(7,19,26,0) 52%),
+    radial-gradient(90% 60% at 74% 18%, rgba(60,136,144,.28), transparent 62%);
+}
+.hero-ghost{
+  position:absolute;left:0;right:0;bottom:-.12em;z-index:-1;
+  font-family:"Literata","Georgia",serif;font-weight:600;
+  font-size:clamp(64px,12vw,180px);line-height:1;letter-spacing:.02em;text-transform:uppercase;
+  text-align:center;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(216,180,135,.13);
+  pointer-events:none;user-select:none;
+}
+.hero .wrap{padding-top:92px;padding-bottom:78px;width:100%}
+@supports (animation-timeline: scroll()){
+  @media (prefers-reduced-motion: no-preference){
+    .hero .wrap{animation:hero-drift linear both;animation-timeline:scroll(root);animation-range:0 640px}
+  }
+}
+@keyframes hero-drift{to{transform:translateY(64px);opacity:.25}}
+.hero-inner{max-width:850px}
+.badge{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(216,180,135,.09);border:1px solid rgba(216,180,135,.45);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  color:var(--sand-soft);font-weight:700;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  padding:8px 16px;border-radius:999px;font-family:"Be Vietnam Pro",sans-serif;
+  box-shadow:0 0 24px rgba(216,180,135,.12), inset 0 1px 0 rgba(255,255,255,.08);
+}
+.badge svg{width:15px;height:15px;flex:none;color:var(--sand-bright)}
+.hero h1{color:var(--paper);font-size:clamp(2.4rem,5.9vw,4.5rem);margin:24px 0 0;line-height:1.07;letter-spacing:-.015em;text-wrap:balance;text-shadow:0 4px 40px rgba(0,0,0,.6)}
+.hero h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 26px rgba(216,180,135,.3))}
+.hero p.sub{font-size:clamp(1.05rem,2.1vw,1.28rem);margin-top:26px;max-width:60ch;color:rgba(238,244,243,.9);font-weight:300;line-height:1.62}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hero-note{display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;margin-top:26px;font-size:.93rem;color:rgba(238,244,243,.86)}
+.hero-note .pc{display:inline-flex;align-items:center;gap:9px}
+.hero-note .pc svg{width:17px;height:17px;color:var(--sand-bright);flex:none;filter:drop-shadow(0 0 6px rgba(216,180,135,.5))}
+.hero-note .dot{width:5px;height:5px;border-radius:50%;background:rgba(216,180,135,.45)}
+
+/* ---------- stat band ---------- */
+.stats{padding-top:0;padding-bottom:0;margin-top:clamp(-64px,-5vw,-40px);z-index:5}
+.stats .wrap{position:relative}
+.stat-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-soft);
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05), var(--shadow-md);
+}
+.stat-item{
+  display:flex;align-items:center;gap:14px;background:rgba(11,30,38,.9);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:26px 24px;min-width:0;
+  transition:background .25s ease,box-shadow .25s ease;
+}
+.stat-item:hover{background:rgba(216,180,135,.07);box-shadow:inset 0 0 34px rgba(216,180,135,.08)}
+.stat-item svg{width:27px;height:27px;flex:none;color:var(--sand-bright);filter:drop-shadow(0 0 8px rgba(216,180,135,.5))}
+.stat-item b{display:block;font-family:"Literata",serif;font-size:1.34rem;font-weight:600;line-height:1.1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat-item small{display:block;color:var(--paper-dim);font-size:.8rem;margin-top:3px}
+@media(max-width:760px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:400px){.stat-grid{grid-template-columns:1fr}}
+
+/* ---------- section heads ---------- */
+.sec-head{max-width:760px;margin-bottom:54px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head p{color:var(--paper-dim);margin-top:17px;font-size:1.08rem}
+
+/* ---------- services (benefits) ---------- */
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.bcard{
+  background:var(--glass);border:1px solid var(--line);border-radius:var(--radius);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:30px 26px;min-width:0;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
+  transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+}
+.bcard:hover{transform:translateY(-5px);border-color:rgba(236,210,171,.45);box-shadow:var(--shadow-md),var(--glow-sm)}
+.bcard .ico{
+  width:54px;height:54px;border-radius:14px;display:grid;place-items:center;
+  background:linear-gradient(155deg,rgba(216,180,135,.16),rgba(60,136,144,.14));
+  color:var(--sand-bright);margin-bottom:18px;border:1px solid var(--line);
+  box-shadow:0 0 18px rgba(216,180,135,.15), inset 0 1px 0 rgba(255,255,255,.08);
+}
+.bcard .ico svg{width:27px;height:27px;filter:drop-shadow(0 0 6px rgba(216,180,135,.45))}
+.bcard h3{margin-bottom:9px;color:var(--paper)}
+.bcard p{color:var(--paper-dim);font-size:.97rem}
+@media(max-width:900px){.bgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.bgrid{grid-template-columns:1fr}}
+
+/* ---------- feature (split) ---------- */
+.feat-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(34px,6vw,72px);align-items:center}
+.feat-grid>*{min-width:0}
+.feat-grid.flip .feat-media{order:-1}
+.feat-copy .lead{color:var(--paper);margin-top:18px;font-size:1.12rem;font-weight:400;line-height:1.6}
+.feat-copy p.body{color:var(--paper-dim);margin-top:15px;font-size:1.03rem}
+.feat-list{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:13px}
+.feat-list li{display:flex;gap:13px;align-items:flex-start;min-width:0}
+.feat-list li svg{width:22px;height:22px;flex:none;color:var(--sand-bright);margin-top:3px;filter:drop-shadow(0 0 6px rgba(216,180,135,.45))}
+.feat-list li span{font-size:1rem;color:var(--paper)}
+.feat-media{position:relative;min-width:0}
+.feat-media img{
+  border-radius:var(--radius);width:100%;height:100%;max-height:560px;object-fit:cover;
+  border:1px solid rgba(216,180,135,.3);box-shadow:var(--shadow-md), 0 0 44px rgba(60,136,144,.2);
+}
+.feat-media::after{content:"";position:absolute;top:18px;left:18px;right:-18px;bottom:-18px;border:1px solid rgba(216,180,135,.3);border-radius:var(--radius);z-index:-1;pointer-events:none}
+.feat-grid.flip .feat-media::after{left:-18px;right:18px}
+.feat-media .float{
+  position:absolute;left:16px;bottom:16px;background:rgba(8,20,27,.82);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:var(--paper);
+  border-radius:14px;padding:16px 21px;border:1px solid var(--line);
+  box-shadow:var(--shadow-md), 0 0 24px rgba(216,180,135,.12), inset 0 1px 0 rgba(255,255,255,.06);
+  display:flex;align-items:center;gap:13px;max-width:calc(100% - 32px);
+}
+.feat-media .float svg{width:29px;height:29px;flex:none;color:var(--sand-bright);filter:drop-shadow(0 0 8px rgba(216,180,135,.5))}
+.feat-media .float b{font-family:"Literata",serif;font-weight:600;font-size:1rem;line-height:1.12;display:block;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.feat-media .float small{color:var(--paper-dim);font-size:.8rem;line-height:1.3;display:block;margin-top:3px}
+.feat-cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:13px}
+@media(max-width:860px){
+  .feat-grid{grid-template-columns:1fr}
+  .feat-grid.flip .feat-media{order:0}
+  .feat-media{max-width:620px}
+  .feat-media::after,.feat-grid.flip .feat-media::after{top:12px;left:12px;right:-12px;bottom:-12px}
+}
+
+/* ---------- gallery ---------- */
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gal{
+  position:relative;border-radius:var(--radius);overflow:hidden;min-width:0;
+  border:1px solid var(--line);box-shadow:var(--shadow-md);aspect-ratio:4/3;
+  transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.gal::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(7,19,26,.72));pointer-events:none}
+.gal span{position:absolute;left:15px;bottom:13px;z-index:1;color:var(--paper);font-size:.86rem;font-weight:600;letter-spacing:.01em;text-shadow:0 2px 10px rgba(0,0,0,.7)}
+.gal:hover{transform:translateY(-4px);border-color:rgba(236,210,171,.45);box-shadow:var(--shadow-lg),var(--glow-sm)}
+.gal:hover img{transform:scale(1.06)}
+@media(max-width:760px){.gal-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){.gal-grid{grid-template-columns:1fr}}
+
+/* ---------- divider pull-quote ---------- */
+.divider{position:relative;color:#fff;overflow:hidden;text-align:center;isolation:isolate}
+.divider .bg{position:absolute;inset:0;z-index:-2}
+.divider .bg img{width:100%;height:100%;object-fit:cover}
+.divider::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(7,19,26,.88),rgba(7,19,26,.93)),radial-gradient(70% 90% at 50% 50%, rgba(60,136,144,.24), transparent 70%)}
+.divider .star{width:40px;height:40px;color:var(--sand-bright);margin:0 auto 22px;filter:drop-shadow(0 0 14px rgba(216,180,135,.6))}
+.divider blockquote{font-family:"Literata",serif;font-weight:500;color:var(--paper);margin:0 auto;font-size:clamp(1.4rem,3.7vw,2.35rem);line-height:1.4;max-width:28ch;text-wrap:balance}
+.divider blockquote b{font-weight:600;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 20px rgba(216,180,135,.3))}
+.divider .who{display:block;margin-top:26px;color:rgba(238,244,243,.72);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+
+/* ---------- reviews ---------- */
+.rev-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.rev{
+  background:var(--glass);border:1px solid var(--line);border-radius:var(--radius);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:30px 28px;min-width:0;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05);display:flex;flex-direction:column;
+  transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+.rev:hover{transform:translateY(-4px);border-color:rgba(236,210,171,.4);box-shadow:var(--shadow-md),var(--glow-sm)}
+.rev .stars{display:flex;gap:3px;margin-bottom:15px}
+.rev .stars svg{width:18px;height:18px;color:var(--sand-bright);filter:drop-shadow(0 0 5px rgba(216,180,135,.4))}
+.rev p{color:var(--paper);font-size:1rem;line-height:1.62}
+.rev .who{margin-top:20px;display:flex;align-items:center;gap:12px}
+.rev .av{width:40px;height:40px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:"Literata",serif;font-weight:600;color:#2a1c08;background:var(--grad);box-shadow:0 4px 14px rgba(138,101,52,.35)}
+.rev .who b{color:var(--paper);font-weight:600;font-size:.95rem;display:block;line-height:1.2}
+.rev .who small{color:var(--paper-dim);font-size:.78rem}
+@media(max-width:720px){.rev-grid{grid-template-columns:1fr}}
+
+/* ---------- visit / service area ---------- */
+.visit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,56px);align-items:start}
+.visit-grid>*{min-width:0}
+.info-card{
+  background:var(--glass);border:1px solid var(--line);border-radius:var(--radius);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:30px 30px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05), var(--shadow-md);
+}
+.info-row{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line-soft)}
+.info-row:last-child{border-bottom:0;padding-bottom:0}
+.info-row:first-child{padding-top:0}
+.info-row .ico{width:42px;height:42px;border-radius:11px;flex:none;display:grid;place-items:center;background:rgba(216,180,135,.1);border:1px solid var(--line);color:var(--sand-bright)}
+.info-row .ico svg{width:20px;height:20px}
+.info-row h4{font-family:"Be Vietnam Pro",sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;color:var(--sand-soft);margin:0 0 5px;font-weight:700}
+.info-row p{color:var(--paper);font-size:1rem;line-height:1.5}
+.info-row a{color:var(--paper);text-decoration:none}
+.info-row a:hover{color:var(--sand-bright)}
+.hours{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.hours li{display:flex;justify-content:space-between;gap:14px;font-size:.96rem;color:var(--paper);padding-bottom:9px;border-bottom:1px solid var(--line-soft)}
+.hours li:last-child{border-bottom:0;padding-bottom:0}
+.hours li .d{color:var(--paper-dim)}
+.hours li.closed .t{color:var(--paper-dim)}
+.hours li.today{color:var(--sand-bright);font-weight:600}
+.hours li.today .d{color:var(--sand-bright)}
+.area-note{margin-top:18px;font-size:.92rem;color:var(--paper-dim)}
+
+/* ---------- CTA band ---------- */
+.cta-band{position:relative;color:#fff;text-align:center;overflow:hidden;isolation:isolate}
+.cta-band .bg{position:absolute;inset:0;z-index:-2}
+.cta-band .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.cta-band::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(7,19,26,.88),rgba(7,19,26,.94)),radial-gradient(80% 90% at 50% 30%, rgba(60,136,144,.26), transparent 68%)}
+.cta-band h2{color:var(--paper);font-size:clamp(2rem,4.8vw,3.3rem)}
+.cta-band h2 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 24px rgba(216,180,135,.3))}
+.cta-band p{color:rgba(238,244,243,.9);font-size:1.12rem;margin:16px auto 0;max-width:56ch}
+.cta-band .btns{margin-top:34px;display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.cta-band .fine{margin-top:22px;font-size:.88rem;color:rgba(238,244,243,.62);letter-spacing:.02em}
+
+/* ---------- footer ---------- */
+footer.site{position:relative;background:linear-gradient(180deg,rgba(18,48,57,.5),rgba(4,10,13,.95));color:rgba(238,244,243,.8);padding-top:66px;padding-bottom:54px}
+footer.site::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 4%,rgba(244,228,201,.32) 30%,rgba(216,180,135,.45) 50%,rgba(60,136,144,.4) 70%,transparent 96%)}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:38px}
+.foot-grid>*{min-width:0}
+.foot-brand .brand b{color:var(--paper)}
+.foot-brand p.desc{margin-top:18px;max-width:42ch;font-size:.92rem;color:var(--paper-dim)}
+.foot-contact{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
+footer.site h4{font-family:"Be Vietnam Pro",sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:.73rem;color:var(--sand-soft);margin:0 0 15px;font-weight:700}
+footer.site a{color:rgba(238,244,243,.84);text-decoration:none}
+footer.site a:hover{color:var(--sand-bright)}
+.foot-col ul{list-style:none;margin:0;padding:0;display:grid;gap:11px;font-size:.93rem}
+.foot-col ul a{display:inline-flex;align-items:center;gap:9px}
+.foot-col ul svg{width:16px;height:16px;flex:none;color:var(--sand);filter:drop-shadow(0 0 5px rgba(216,180,135,.4))}
+.foot-bottom{border-top:1px solid var(--line-soft);margin-top:46px;padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.83rem;color:var(--paper-dim)}
+.foot-bottom a{color:var(--sand-soft)}
+.foot-note{margin-top:14px;font-size:.76rem;color:rgba(157,183,182,.6);max-width:76ch}
+@media(max-width:720px){.foot-grid{grid-template-columns:1fr 1fr}.foot-brand{grid-column:1/-1}}
+@media(max-width:460px){.foot-grid{grid-template-columns:1fr}}
+@media(max-width:860px){.visit-grid{grid-template-columns:1fr}}
+
+/* ---------- reveal on scroll ---------- */
+.js .reveal{opacity:0;transform:translateY(26px) scale(.975);filter:blur(7px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1),filter .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.is-visible{opacity:1;transform:none;filter:none}
+.bgrid > .reveal:nth-child(3n+2),.gal-grid > .reveal:nth-child(3n+2),.rev-grid > .reveal:nth-child(2n),.stat-grid > .reveal:nth-child(2){transition-delay:.1s}
+.bgrid > .reveal:nth-child(3n),.gal-grid > .reveal:nth-child(3n),.stat-grid > .reveal:nth-child(3){transition-delay:.2s}
+.stat-grid > .reveal:nth-child(4){transition-delay:.3s}
+@media (prefers-reduced-motion: reduce){.js .reveal{opacity:1 !important;transform:none !important;filter:none !important}}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- living background: sand/teal aurora blobs + film grain (decorative) -->
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Upholstery By Design home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.4" r="2"/><path d="M12 6.4V21"/><path d="M8.4 9.6H15.6"/><path d="M4 13.5a8 8 0 0 0 16 0"/><path d="M4 13.5l-1.8 1.1M20 13.5l1.8 1.1"/></svg>
+      </span>
+      <span class="bt">
+        <b>Upholstery By Design</b>
+        <span class="tag">Marine &middot; Furniture &mdash; Palmetto, FL</span>
+      </span>
+    </a>
+    <div class="nav-right">
+      <nav class="nav-links" aria-label="Primary">
+        <a class="link" href="#services">Services</a>
+        <a class="link" href="#marine">Marine</a>
+        <a class="link" href="#work">Our Work</a>
+        <a class="link" href="#reviews">Reviews</a>
+      </nav>
+      <a class="txt-link" href="sms:+19418127878" aria-label="Text Upholstery By Design at (941) 812-7878">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <span class="label-txt">Text&nbsp;us</span>
+      </a>
+      <a class="callbtn" href="tel:+19418127878" aria-label="Call Upholstery By Design at (941) 812-7878">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="cn">(941) 812-7878<small>Call us today</small></span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <span id="top"></span>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="img/hero.jpg" alt="" fetchpriority="high">
+    </div>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-ghost" aria-hidden="true">By Design</div>
+    <div class="wrap">
+      <div class="hero-inner">
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.7 7.6L21 11l-7.3 1.4L12 22l-1.7-7.6L3 13l7.3-1.4z"/></svg>
+          Marine &amp; Furniture Upholstery
+        </span>
+        <h1>Your boat, rebuilt in vinyl that <em>looks and feels better than new.</em></h1>
+        <p class="sub">Upholstery By Design rebuilds marine and furniture upholstery right here in Palmetto &mdash; boat seats and bolsters, livewell and console covers, bow cushions and custom cushion work. Crystal designs each job around your boat, so the finish flows and hugs every curve.</p>
+        <div class="hero-cta">
+          <a class="btn btn-sand stack" href="tel:+19418127878">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span class="txt">Call (941) 812-7878<span class="sub">Talk to Crystal about your project</span></span>
+          </a>
+          <a class="btn btn-ghost" href="sms:+19418127878">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            Text a photo for a quote
+          </a>
+        </div>
+        <p class="hero-note">
+          <span class="pc"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.5 6.9L21.5 10l-5.2 4.6L17.8 22 12 18.2 6.2 22l1.5-7.4L2.5 10l7-1.1z"/></svg> 4.8 rating &middot; 20 Google reviews</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="pc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Design &amp; upholstery under one roof</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STAT BAND ============ -->
+  <section class="stats" aria-label="Upholstery By Design at a glance">
+    <div class="wrap">
+      <div class="stat-grid">
+        <div class="stat-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg>
+          <div><b>4.8 &starf;</b><small>20 Google reviews</small></div>
+        </div>
+        <div class="stat-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20s2-1 4-1 3 1 6 1 4-1 6-1 4 1 4 1"/><path d="M4 18l2.5-7.5A2 2 0 0 1 8.4 9H20l-3 6"/><path d="M9 9V5h4l3 4"/></svg>
+          <div><b>Marine</b><small>Seats, bolsters &amp; covers</small></div>
+        </div>
+        <div class="stat-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v-1a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1"/><path d="M3 12h18a1 1 0 0 1 1 1v4h-2v-2H4v2H2v-4a1 1 0 0 1 1-1z"/><path d="M6 9V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/></svg>
+          <div><b>Furniture</b><small>Custom cushion covers</small></div>
+        </div>
+        <div class="stat-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l1.7 7.6L21 11l-7.3 1.4L12 22l-1.7-7.6L3 13l7.3-1.4z"/></svg>
+          <div><b>Designed</b><small>Around your boat</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="services" id="services" aria-labelledby="services-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">What we recover</p>
+        <h2 id="services-h">Marine upholstery done right &mdash; <span class="gtext">plus the custom work.</span></h2>
+        <p>Boats are our lane, from a single livewell seat to a full deck redesign &mdash; and we handle furniture cushion covers for the home, too. If it has a seat, a cushion or a cover, bring it to us.</p>
+      </div>
+      <div class="bgrid">
+
+        <article class="bcard reveal">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20s2-1 4-1 3 1 6 1 4-1 6-1 4 1 4 1"/><path d="M4 18l2.5-7.5A2 2 0 0 1 8.4 9H20l-3 6"/><path d="M9 9V5h4l3 4"/></svg></div>
+          <h3>Boat seats &amp; helm chairs</h3>
+          <p>Leaning posts, helm seats and full deck sets rebuilt in marine-grade vinyl that stands up to Florida sun, salt and water &mdash; better than new when they leave.</p>
+        </article>
+
+        <article class="bcard reveal">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c2-4 5-6 9-6s7 2 9 6c-2 4-5 6-9 6s-7-2-9-6z"/><path d="M7 12h10"/></svg></div>
+          <h3>Bolsters &amp; side panels</h3>
+          <p>Rub rails, gunwale bolsters and side panels wrapped so they hug every curve of the hull &mdash; the detail that makes a re-do look factory, not patched.</p>
+        </article>
+
+        <article class="bcard reveal">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/><path d="M8 6V4h8v2"/></svg></div>
+          <h3>Livewell &amp; console covers</h3>
+          <p>New vinyl for livewell seats, center-console backrests and helm pads &mdash; the high-wear pieces that take the sun, priced fair with quick turnaround.</p>
+        </article>
+
+        <article class="bcard reveal">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v3H4z"/><path d="M6 11V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/><path d="M4 17v2M20 17v2"/></svg></div>
+          <h3>Cushions &amp; bow lounges</h3>
+          <p>Bow lounges, cabin settees and cockpit cushions rebuilt with fresh foam and new covers &mdash; comfort and shape restored, not just the fabric.</p>
+        </article>
+
+        <article class="bcard reveal">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v-1a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1"/><path d="M3 12h18a1 1 0 0 1 1 1v4h-2v-2H4v2H2v-4a1 1 0 0 1 1-1z"/><path d="M6 9V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/></svg></div>
+          <h3>Furniture cushion covers</h3>
+          <p>Zippered cushion covers and sofa cushions for the home, sewn to fit and finished beautifully &mdash; prompt, fair and a pleasure to work with.</p>
+        </article>
+
+        <article class="bcard reveal">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.7 7.6L21 11l-7.3 1.4L12 22l-1.7-7.6L3 13l7.3-1.4z"/></svg></div>
+          <h3>Design, foam &amp; repairs</h3>
+          <p>New foam, restitched seams and a hands-on design process &mdash; Crystal helps you pick colors and a scheme that flows through the whole vessel.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARINE FEATURE ============ -->
+  <section class="feature alt" id="marine" aria-labelledby="marine-h">
+    <div class="wrap feat-grid">
+      <div class="feat-copy reveal">
+        <p class="eyebrow">On the water</p>
+        <h2 id="marine-h">Marine work built to <span class="gtext">take the Florida sun.</span></h2>
+        <p class="lead">Sun and salt are hard on a boat &mdash; worn, cracked, sun-beaten vinyl doesn't last. We rebuild helm seats, bolsters, livewell seats and full deck sets in marine-grade materials so the interior looks sharp and holds up season after season.</p>
+        <p class="body">From center consoles to offshore boats like the Grady White Canyon and Intrepid, the finish comes back tight, clean and better than new &mdash; including the diamond stitch, matched piping and bolster wrap that set a real upholstery shop apart.</p>
+        <ul class="feat-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Helm seats, leaning posts, bolsters &amp; full deck sets</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Marine-grade vinyl and thread that resist sun, salt &amp; mildew</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Good pricing and turnaround better than most owners expect</span></li>
+        </ul>
+        <div class="feat-cta">
+          <a class="btn btn-sand" href="tel:+19418127878">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Get a boat quote
+          </a>
+          <a class="btn btn-ghost" href="sms:+19418127878">Text us</a>
+        </div>
+      </div>
+      <div class="feat-media reveal">
+        <img src="img/marine.jpg" loading="lazy" alt="Center-console boat helm seat and bolsters freshly reupholstered in tan diamond-stitch marine vinyl, on the water at a dock">
+        <div class="float">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20s2-1 4-1 3 1 6 1 4-1 6-1 4 1 4 1"/><path d="M4 18l2.5-7.5A2 2 0 0 1 8.4 9H20l-3 6"/></svg>
+          <div><b>Boat &amp; deck sets</b><small>Helm seats to full interiors</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DESIGN FEATURE ============ -->
+  <section class="feature" aria-labelledby="design-h">
+    <div class="wrap feat-grid flip">
+      <div class="feat-copy reveal">
+        <p class="eyebrow">Design first</p>
+        <h2 id="design-h">A color scheme that <span class="gtext">flows through the whole boat.</span></h2>
+        <p class="lead">Reupholstery isn't just new vinyl &mdash; it's a design. Crystal takes you by the hand, explains how she'll rebuild the cushions and works out a scheme that carries through the entire vessel, from helm to bow.</p>
+        <p class="body">Diamond stitch, contrast piping, custom colors and one-off patterns &mdash; the creative details that turn a tired interior into something you're proud to show off. Tell us the vision and we'll build to it.</p>
+        <ul class="feat-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Hands-on design help with colors, stitch and layout</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Diamond stitch, contrast thread and custom color schemes</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Bolsters redesigned to hug every curve of the hull</span></li>
+        </ul>
+        <div class="feat-cta">
+          <a class="btn btn-sand" href="tel:+19418127878">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Start your design
+          </a>
+          <a class="btn btn-ghost" href="sms:+19418127878">Text us</a>
+        </div>
+      </div>
+      <div class="feat-media reveal">
+        <img src="img/design.jpg" loading="lazy" alt="Custom boat seats upholstered in black and white diamond-stitch vinyl with red contrast thread, freshly built in the shop">
+        <div class="float">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l1.7 7.6L21 11l-7.3 1.4L12 22l-1.7-7.6L3 13l7.3-1.4z"/></svg>
+          <div><b>Custom design</b><small>Colors &amp; stitch you choose</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="work" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">Straight from the shop</p>
+        <h2 id="work-h">Real boats, <span class="gtext">real finishes.</span></h2>
+        <p>Every photo here is our own work &mdash; boat seats, bolsters and cushions that came through the Palmetto shop.</p>
+      </div>
+      <div class="gal-grid">
+        <figure class="gal reveal"><img src="img/g1.jpg" loading="lazy" alt="Boat console backrest reupholstered in white vinyl with a carbon-grey accent and a Nor-Tech logo"><span>Console backrest re-do</span></figure>
+        <figure class="gal reveal"><img src="img/g2.jpg" loading="lazy" alt="White marine bench seat with a grey accent bolster freshly upholstered on the shop workbench"><span>Bench seat rebuild</span></figure>
+        <figure class="gal reveal"><img src="img/g3.jpg" loading="lazy" alt="Large curved white boat cushion with diamond-stitch quilting and black piping in the shop"><span>Diamond-stitch cushion</span></figure>
+        <figure class="gal reveal"><img src="img/g4.jpg" loading="lazy" alt="Boat cockpit with tan helm seats, cushions and snap-in carpet reupholstered to match"><span>Full cockpit set</span></figure>
+        <figure class="gal reveal"><img src="img/g5.jpg" loading="lazy" alt="White marine bench seat with a grey accent stripe built on the shop table"><span>Bow bench cushion</span></figure>
+        <figure class="gal reveal"><img src="img/g6.jpg" loading="lazy" alt="Boat bench seat upholstered in white diamond-stitch vinyl with navy piping on the shop workbench"><span>Navy-piped diamond stitch</span></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DIVIDER PULL-QUOTE ============ -->
+  <section class="divider" aria-label="Customer quote">
+    <div class="bg" aria-hidden="true"><img loading="lazy" src="img/divider.jpg" alt=""></div>
+    <div class="wrap reveal">
+      <svg class="star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l1.9 8.6 8.6 1.9-8.6 1.9L12 22l-1.9-8.6L1.5 12.5l8.6-1.9z"/></svg>
+      <blockquote>&ldquo;We are astounded with how <b>Crystal redesigned the bolsters around the entire boat &mdash; it hugs every curve.</b> The color scheme flows throughout the vessel.&rdquo;</blockquote>
+      <span class="who">Verified Google review &middot; Upholstery By Design</span>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="reviews" id="reviews" aria-labelledby="reviews-h">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">4.8 across 20 reviews</p>
+        <h2 id="reviews-h">Boaters and homeowners <span class="gtext">who send friends our way.</span></h2>
+      </div>
+      <div class="rev-grid">
+
+        <article class="rev reveal">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg>
+          </div>
+          <p>&ldquo;My husband and I took our Intrepid to Upholstery By Design since the upholstery was worn, cracked and beat by the sun. The design process was surprisingly pleasant &mdash; Crystal took us by the hand and created an amazing design. We are exceedingly happy with the results.&rdquo;</p>
+          <div class="who"><span class="av" aria-hidden="true">Y</span><div><b>Yarumi F.</b><small>Intrepid boat redesign</small></div></div>
+        </article>
+
+        <article class="rev reveal">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg>
+          </div>
+          <p>&ldquo;I had my seats and bolsters and side panels on my Grady White Canyon 306 redone by Upholstery by Design. They did an excellent job &mdash; look and feel better than new! Crystal makes sure the job is done right.&rdquo;</p>
+          <div class="who"><span class="av" aria-hidden="true">D</span><div><b>David G.</b><small>Grady White Canyon 306</small></div></div>
+        </article>
+
+        <article class="rev reveal">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg>
+          </div>
+          <p>&ldquo;Crystal made a zippered cushion cover for my sofa, and it turned out beautifully! She responded so promptly to my calls and texts, and was a pleasure to work with. Her prices are fair and her work is top notch.&rdquo;</p>
+          <div class="who"><span class="av" aria-hidden="true">L</span><div><b>Laura S.</b><small>Furniture cushion cover</small></div></div>
+        </article>
+
+        <article class="rev reveal">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21l1.2-7-5-4.9 7.1-1z"/></svg>
+          </div>
+          <p>&ldquo;Upholstery By Design was first class in my book. I took a livewell seat and center-console backrest in for new vinyl. Price was good and turnaround was better than expected. I'd recommend them to anyone needing vinyl boat seating.&rdquo;</p>
+          <div class="who"><span class="av" aria-hidden="true">M</span><div><b>Michael H.</b><small>Livewell &amp; console vinyl</small></div></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VISIT / SERVICE AREA ============ -->
+  <section class="visit alt" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Find the shop</p>
+        <h2 id="visit-h">On 10th Ave W in Palmetto &mdash; <span class="gtext">serving Manatee &amp; Tampa Bay.</span></h2>
+      </div>
+      <div class="visit-grid">
+        <div class="info-card reveal">
+          <div class="info-row">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div><h4>Location</h4><p>807 10th Ave W<br>Palmetto, FL 34221</p></div>
+          </div>
+          <div class="info-row">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div><h4>Call or text</h4><p><a href="tel:+19418127878">(941) 812-7878</a></p></div>
+          </div>
+          <div class="info-row">
+            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/></svg></span>
+            <div><h4>Service area</h4><p>Palmetto, Bradenton, Manatee County &amp; the greater Tampa Bay area</p></div>
+          </div>
+        </div>
+        <div class="info-card reveal">
+          <h4 style="margin-bottom:16px">Shop hours</h4>
+          <ul class="hours" id="hours">
+            <li data-day="1"><span class="d">Monday</span><span class="t">8:00 AM &ndash; 5:00 PM</span></li>
+            <li data-day="2"><span class="d">Tuesday</span><span class="t">8:00 AM &ndash; 5:00 PM</span></li>
+            <li data-day="3"><span class="d">Wednesday</span><span class="t">8:00 AM &ndash; 5:00 PM</span></li>
+            <li data-day="4"><span class="d">Thursday</span><span class="t">8:00 AM &ndash; 5:00 PM</span></li>
+            <li data-day="5"><span class="d">Friday</span><span class="t">8:00 AM &ndash; 5:00 PM</span></li>
+            <li class="closed" data-day="6"><span class="d">Saturday</span><span class="t">Closed</span></li>
+            <li class="closed" data-day="0"><span class="d">Sunday</span><span class="t">Closed</span></li>
+          </ul>
+          <p class="area-note">Dropping off a boat or a big job? Give us a call first and we'll make sure someone's ready for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="cta-band" aria-labelledby="cta-h">
+    <div class="bg" aria-hidden="true"><img loading="lazy" src="img/cta.jpg" alt=""></div>
+    <div class="wrap reveal">
+      <h2 id="cta-h">Ready to <em>bring your boat back to life?</em></h2>
+      <p>Tell us about your boat or your project &mdash; a single seat or a full redesign &mdash; and we'll get you a quote. Call or text Upholstery By Design today.</p>
+      <div class="btns">
+        <a class="btn btn-sand" href="tel:+19418127878">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (941) 812-7878
+        </a>
+        <a class="btn btn-ghost" href="sms:+19418127878">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Text a photo
+        </a>
+      </div>
+      <p class="fine">Marine &middot; Furniture &middot; Custom design &mdash; Palmetto, FL &middot; 4.8 across 20 Google reviews</p>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.4" r="2"/><path d="M12 6.4V21"/><path d="M8.4 9.6H15.6"/><path d="M4 13.5a8 8 0 0 0 16 0"/><path d="M4 13.5l-1.8 1.1M20 13.5l1.8 1.1"/></svg>
+          </span>
+          <span class="bt">
+            <b>Upholstery By Design</b>
+            <span class="tag">Marine &middot; Furniture &mdash; Palmetto, FL</span>
+          </span>
+        </div>
+        <p class="desc">Marine and furniture upholstery in Palmetto, FL &mdash; boat seats, bolsters and covers, cushions and custom cushion covers, all designed and built in-house by Crystal.</p>
+        <div class="foot-contact">
+          <a class="btn btn-sand" href="tel:+19418127878">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call us
+          </a>
+          <a class="btn btn-ghost" href="sms:+19418127878">Text us</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#marine">Marine upholstery</a></li>
+          <li><a href="#services">Bolsters &amp; side panels</a></li>
+          <li><a href="#services">Cushions &amp; covers</a></li>
+          <li><a href="#services">Furniture cushions</a></li>
+          <li><a href="#work">Our work</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Visit &amp; contact</h4>
+        <ul>
+          <li><a href="tel:+19418127878"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(941) 812-7878</a></li>
+          <li><a href="sms:+19418127878"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Text us</a></li>
+          <li><a href="#visit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>807 10th Ave W, Palmetto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="yr">2026</span> Upholstery By Design LLC. All rights reserved.</span>
+      <span>Website by <a href="https://wilsoninnovations.net" target="_blank" rel="noopener">Wilson Innovations</a></span>
+    </div>
+    <p class="foot-note">Reviews shown are real Google reviews from Upholstery By Design customers. Photos are the shop's own work. 4.8 rating across 20 Google reviews at time of writing.</p>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Header scrolled state
+  (function(){
+    var header = document.querySelector('header.site');
+    function onScroll(){ if(header) header.classList.toggle('is-scrolled', window.scrollY > 8); }
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive:true});
+  })();
+
+  // Highlight today's hours
+  (function(){
+    var today = new Date().getDay();
+    var row = document.querySelector('#hours li[data-day="'+today+'"]');
+    if(row) row.classList.add('today');
+  })();
+
+  // Scroll reveal — one-shot blur/transform (respects prefers-reduced-motion)
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+    if(reduce || !('IntersectionObserver' in window)){
+      els.forEach(function(el){ el.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, {rootMargin:'0px 0px 12% 0px', threshold:0});
+    els.forEach(function(el){ io.observe(el); });
+
+    var sweepTimer = null;
+    var sweep = function(){
+      sweepTimer = null;
+      var vh = window.innerHeight;
+      els = els.filter(function(el){
+        if(el.classList.contains('is-visible')) return false;
+        if(el.getBoundingClientRect().top < vh){ el.classList.add('is-visible'); io.unobserve(el); return false; }
+        return true;
+      });
+    };
+    window.addEventListener('scroll', function(){ if(!sweepTimer) sweepTimer = setTimeout(sweep, 90); }, {passive:true});
+  })();
+</script>
+</body>
+</html>
